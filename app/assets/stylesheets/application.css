@@ -168,11 +168,12 @@ input {
   text-transform: uppercase;
   display: flex;
   z-index: 1;
+  padding: 50px;
 }
 
 .link-container {
   height: auto;
-  width: 1200px;
+  width: 80%;
   z-index: 1;
   background-color: white;
   margin-top: 100px;
