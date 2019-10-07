@@ -5,6 +5,9 @@ class UrlLinksController < ApplicationController
   end
 
   def create
+    if UrlLink.create(user: current_user, original_url: permitted_params[:original_url])
+      redirect_to :url_links
+    end
   end
 
   private
