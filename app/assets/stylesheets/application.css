@@ -105,7 +105,6 @@ input {
   width: -webkit-fill-available;
   font-size: 15px;
   font-weight: bold;
-  text-transform: uppercase;
   padding: 12px 20px;
   margin: 8px 10px;
   border: none;
@@ -169,6 +168,8 @@ input {
   display: flex;
   z-index: 1;
   padding: 50px;
+  text-align: justify;
+  text-justify: inter-word;
 }
 
 .link-container {
@@ -260,7 +261,7 @@ input {
 .my-links {
   margin-top: 50px;
   background-color: white;
-  max-width: 1400px;
+  max-width: 90%;
   height: 850px;
   width: -webkit-fill-available;
   display: flex;
