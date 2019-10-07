@@ -1,3 +1,14 @@
 <div class="my-links">
-
+  <h2> Meus Links </h2>
+  <div class="items">
+    <% @url_links.each do |url_link| %>
+      <div class="item">
+        <div class="original-url"> <%= url_link.original_url %> </div>
+        <div class="shortened-url"> <%= url_link.shortened_url %> </div>
+      </div>
+    <% end %>
+  </div>
+  <div class="digg_pagination">
+    <%= will_paginate @url_links, :container => false %>
+  </div>
 </div>
