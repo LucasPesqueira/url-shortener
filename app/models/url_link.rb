@@ -8,6 +8,6 @@ class UrlLink < ApplicationRecord
   private
 
   def generate_shortened_url
-    self.shortened_url = rand(36**8).to_s(36)
+    self.shortened_url = "#{ENV['ROOT_URL']}#{rand(36**8).to_s(36)}"
   end
 end

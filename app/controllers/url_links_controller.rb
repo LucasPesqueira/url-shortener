@@ -10,6 +10,10 @@ class UrlLinksController < ApplicationController
     end
   end
 
+  def link_redirect
+    byebug
+  end
+
   private
 
   def permitted_params

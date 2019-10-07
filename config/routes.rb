@@ -8,4 +8,6 @@ Rails.application.routes.draw do
   }
 
   resources :url_links, only: [:create, :index]
+
+  get '/:hash' => redirect { |params| "/?hash=#{params[:hash]}" }
 end

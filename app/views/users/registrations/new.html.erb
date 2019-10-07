@@ -18,6 +18,8 @@
       <div class="field">
         <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder: 'Confirmação de senha' %>
       </div>
+
+      <%= link_to 'entrar', new_user_session_path, class: 'nav-link' %>
     </div>
 
     <div class="actions">

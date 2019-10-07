@@ -9,10 +9,13 @@
       <div class="field">
         <%= f.text_field :original_url, autofocus: true, placeholder: 'Coloque seu link aqui' %>
       </div>
-
-      <div class="actions">
-        <%= f.submit "Enviar", class: 'submit' %>
-      </div>
+      <% if @current_user.present? %>
+        <div class="actions">
+          <%= f.submit "Enviar", class: 'submit' %>
+        </div>
+      <% else %>
+        <%= link_to 'cadastrar', new_user_registration_path, class: 'sign-up-link' %>
+      <% end %>
     <% end %>
   </div>
 </div>
