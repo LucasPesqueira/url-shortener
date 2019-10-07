@@ -17,7 +17,7 @@ class HomeController < ApplicationController
   def get_redirect_url(url_link)
     url = URI.parse url_link.original_url
     if url.scheme.present?
-      url
+      url_link.original_url
     else
       "http://#{url_link.original_url}"
     end
