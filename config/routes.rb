@@ -1,4 +1,11 @@
 Rails.application.routes.draw do
-  devise_for :users
   root to: "home#index"
+
+  devise_for :users, controllers: {
+    sessions: 'users/sessions',
+    registrations: 'users/registrations',
+    passwords: 'users/passwords'
+  }
+
+  resources :url_links, only: [:create, :index]
 end

@@ -5,14 +5,35 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
+    <%= favicon_link_tag asset_path('icon.png') %>
+
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-    <div class="header"></div>
+    <div class="header">
+      <%= link_to root_path, class: 'logo-link' do %>
+        <%= image_tag "url-shortener.png", size: '240x100', alt: 'logo' %>
+      <% end %>
+
+      <div class="action-links">
+        <% if @current_user.blank? %>
+          <%= link_to 'entrar', new_user_session_path %>
+          <%= ' | ' %>
+          <%= link_to 'cadastrar', new_user_registration_path %>
+        <% else %>
+          <%= link_to 'meus links', url_links_path %>
+          <%= ' | ' %>
+          <%= link_to 'sair', destroy_user_session_path, method: :delete %>
+        <% end %>
+      </div>
+    </div>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
-    <%= yield %>
+    <div class="content">
+      <%= yield %>
+      <div class="layer"> </div>
+    </div>
   </body>
 </html>

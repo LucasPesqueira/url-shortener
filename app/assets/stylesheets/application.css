@@ -2,11 +2,155 @@ body {
   margin: 0px;
   padding: 0px;
   font-family: "Oxygen", sans-serif;
+  display: flex;
+  flex-direction: column;
+  background-image: url("background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
+
 .header {
-  padding: 60px;
-  text-align: center;
+  height: 100px;
   background: #00cabb;
   color: white;
-  font-size: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-link {
+  padding-left: 30px;
+}
+
+.action-links {
+  padding-right: 30px;
+}
+
+.action-links a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.action-links a:hover {
+  color: #6479eb;
+}
+
+.layer {
+  background-image: linear-gradient(rgba(226, 216, 216, 0.24), rgba(63, 63, 63, 0.555));
+  position: absolute;
+  z-index: 0;
+  top: 100px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+}
+
+.form-container {
+  height: auto;
+  width: 400px;
+  position: absolute;
+  z-index: 1;
+  background-color: white;
+  margin-top: 70px;
+  border-radius: 5px;
+  font-weight: bold;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+}
+
+hr {
+  border-bottom-style: none;
+  width: -webkit-fill-available;
+  margin: 5px;
+  border-top: 2px solid #c1c1c1;
+}
+
+.form-container h2 {
+  margin: 0px;
+  margin-left: 30px;
+  margin-top: 20px;
+  color: #757575;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+}
+
+.fields {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+}
+
+.actions {
+  margin-top: 30px;
+  display: flex;
+}
+
+input {
+  width: -webkit-fill-available;
+  font-size: 15px;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 12px 20px;
+  margin: 8px 10px;
+  border: none;
+  border-bottom: 1px solid #a5a5a5;
+  outline: none;
+}
+
+.submit {
+  margin: 0px;
+  padding: 0px;
+  background-color: #6479eb;
+  border: none;
+  color: white;
+  width: 100%;
+  height: 50px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+::placeholder {
+  color: #a5a5a5;
+  opacity: 1;
+}
+
+:-ms-input-placeholder {
+ color: #a5a5a5;
+}
+
+::-ms-input-placeholder {
+ color: #a5a5a5;
+}
+
+.link-container {
+  height: auto;
+  width: 400px;
+  position: absolute;
+  z-index: 1;
+  background-color: white;
+  margin-top: 70px;
+  border-radius: 5px;
+  font-weight: bold;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
 }
