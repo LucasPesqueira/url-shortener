@@ -14,7 +14,7 @@
     <% @url_links.each do |url_link| %>
       <div class="item">
         <div class="original-url"> <%= url_link.original_url %> </div>
-        <div class="shortened-url"> <%= url_link.shortened_url %> </div>
+        <div class="shortened-url"> <%= link_to url_link.shortened_url, url_link.shortened_url, target: '_blank' %> </div>
       </div>
     <% end %>
   </div>
