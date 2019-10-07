@@ -1,5 +1,15 @@
 <div class="my-links">
   <h2> Meus Links </h2>
+  <div class="link-container">
+    <%= form_for(:url_link, url: url_links_path, html: { class: 'form' }) do |f| %>
+      <div class="field">
+        <%= f.text_field :original_url, autofocus: true, placeholder: 'Cole seu link aqui' %>
+      </div>
+      <div class="actions">
+        <%= f.submit "Enviar", class: 'submit' %>
+      </div>
+    <% end %>
+  </div>
   <div class="items">
     <% @url_links.each do |url_link| %>
       <div class="item">

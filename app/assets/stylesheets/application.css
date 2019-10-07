@@ -262,7 +262,7 @@ input {
   margin-top: 50px;
   background-color: white;
   max-width: 90%;
-  height: 850px;
+  height: 870px;
   width: -webkit-fill-available;
   display: flex;
   position: absolute;
@@ -277,16 +277,31 @@ input {
 .items {
   height: 100%;
   width: -webkit-fill-available;
-  padding: 50px;
+  padding: 20px 50px 50px 50px;
   display: flex;
   flex-direction: column;
 }
+
 .item {
   padding: 20px;
   width: -webkit-fill-available;
   border-bottom: 1px solid #757575;
   display: flex;
   justify-content: space-around;
+}
+
+.my-links .link-container {
+  height: auto;
+  width: 80%;
+  z-index: 1;
+  background-color: white;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  border-radius: 0px;
+  font-weight: bold;
+  text-transform: uppercase;
+  display: flex;
+  padding: 5px;
 }
 
 .digg_pagination {
